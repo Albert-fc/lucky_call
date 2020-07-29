@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<style>
+    *{
+        font-family: 'Montserrat', sans-serif;
+    }
+    .container{
+        max-width: 50%;
+        border: 2px solid #AAAAAA !important;
+        border-radius: 15px;
+        margin: 0 auto;
+        border: 1px;
+        padding: 30px;
+    }
+</style>
+
+<title>Radio Server</title>
+<div class="container">
+<h1>Thanks for participating!</h1>
+<h2>The Keyword you introduced is correct! 
+    The three-digit number has been added to the number pool. 
+</h2>
+
+<h3>Global counter: {{ counter }}</h3>
+<h3>Total number of participants: {{ request_number }}</h3>
+
+<a href="/">
+    <input type="button" value="Back to main menu" />
+</a>
+</div>

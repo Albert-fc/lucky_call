@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<style>
+    *{
+        font-family: 'Montserrat', sans-serif;
+    }
+    .container{
+        max-width: 50%;
+        border: 2px solid #AAAAAA !important;
+        border-radius: 15px;
+        margin: 0 auto;
+        border: 1px;
+        padding: 30px;
+    }
+</style>
+<html>
+    <title>Radio Server</title>
+    <div class="container">
+    <h1>Radio Server</h1>
+    </br>
+    <h2>Thanks for listening to our radio podcast!</h2>
+    <h2>Enter the keyword of the day and a three-digit number of your choice.</h2>
+
+    {% if errors %}
+        <h2 style="color:red">{{ msg }}</h2>
+    {% endif %}
+
+    <form action="/" method="POST">
+        <label for="keyWord">Keyword:</label>
+        <input type="text" name="keyWord"></input>
+
+        </br>
+        </br>
+        <label for="number_3_digit">3-digit number:</label>
+        <input type="number" min="0" max="999" name="number_3_digit"></input>
+        
+        </br>  
+        </br>
+        <input type="submit"></input>
+    </form>
+
+    </br>
+    </br>
+    <h1>Hall of fame</h1>
+    {% for winner in winners %}
+        <h3>Name: {{winner}}</h3>
+    {% endfor %}
+    </div>
+</html>
